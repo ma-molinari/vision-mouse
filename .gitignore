@@ -1,0 +1,9 @@
+.venv/
+.build/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.codex/
+.specs/
+
+.DS_Store

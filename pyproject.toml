@@ -1,0 +1,26 @@
+[project]
+name = "vision-mouse"
+version = "0.1.0"
+description = "Local hand-tracking mouse control pipeline for macOS."
+requires-python = ">=3.9"
+dependencies = [
+  "mediapipe>=0.10.0",
+  "opencv-python>=4.10.0",
+  "pynput>=1.7.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vision_mouse = ["resources/models/*.task"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
